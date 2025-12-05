@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+    /* Main colors of the application */
+    --color-blue: #0068e7;
+    --color-dark-blue: #1C2844;
+    --color-gray-blue: #4D6683;
+    --color-light: #EDF5FE;
+    --color-light-blue: #E2EFFF;
+    --color-blue-selected: #BFDCFF;
+    --color-green: #92F2A5;
+
+    /*Error colors*/
+    --color-light-red: #EAAEAE;
+    --color-red: #851313;
+
+    /* Colors for metadata in election results */
+    --color-friendly-blue: #2771FA;
+    --color-friendly-green: #478E62;
+    --color-friendly-purple: #A527FA;
+    --color-friendly-red: #BF393B;
+
+    /* Font */
+    --font-roboto-flex: "roboto-flex", sans-serif;
+    --default-font-family: var(--font-roboto-flex);
+
+    /* Breakpoints */
+    --breakpoint-3xl: 100rem; /* 1600px */
+    --breakpoint-4xl: 120rem; /* 1920px */
+}
+
+@utility btn {
+    padding: 0.5rem 1.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "roboto-flex", sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.btn-clear-white {
+    @apply btn bg-transparent border-white border-2;
+    @apply hover:bg-blue hover:border-blue;
+    @apply active:bg-transparent;
+}
+
+.btn-clear-dark {
+    @apply btn bg-transparent border-dark-blue border-2;
+    @apply hover:bg-blue hover:border-blue;
+    @apply hover:text-white;
+    @apply active:bg-transparent;
+}
+
+.btn-blue {
+    @apply btn bg-blue ;
+    @apply hover:bg-gray-blue;
+    @apply active:bg-blue;
+}
+
+.btn-green {
+    @apply btn bg-green text-dark-blue;
+    @apply hover:bg-gray-blue;
+    @apply active:bg-green;
+}
+
+@font-face {
+    font-family: "roboto-flex";
+    src: url("../fonts/roboto-flex.ttf") format("truetype");
+}
+body {
+    background-color: #EDF5FE;
+}
+
+.bg-light-blue {
+    background-color: var(--color-light-blue);
+}
+
+
+
