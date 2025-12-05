@@ -1,0 +1,11 @@
+-- CREATE TABLE polling_station_candidate_vote (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY UNIQUE,
+--     polling_station_id VARCHAR(25) NULL, -- TODO: Change to NOT NULL
+--     party_id BIGINT NOT NULL,
+--     candidate_id BIGINT NOT NULL,
+--     votes INT NOT NULL,
+--     CONSTRAINT fk_pscv_polling_station FOREIGN KEY (polling_station_id) REFERENCES polling_station(id),
+--     CONSTRAINT uk_polling_station_candidate_party UNIQUE (polling_station_id, candidate_id, party_id)
+-- --     CONSTRAINT fk_pscv_candidate FOREIGN KEY (candidate_id) REFERENCES candidate(id);
+-- --     CONSTRAINT fk_pscv_party FOREIGN KEY (party_id) REFERENCES party(id);
+-- );
